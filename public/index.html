@@ -3,12 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../src/output.css">
     <title>WatchFlix</title>
 </head>
-<body>
+<body class="bg-slate-600">
     <div class="">
 
     </div>
+    <form action="postMovie">
+        <fieldset>
+            <label for="movie_name">Movie Name: 
+                <input id="movie_name" type="text">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <label for="movie_genre">Genre: </label>
+            <select id="movie_genre" name="movie_genre">
+                <option value="0">Drama</option>
+                <option value="1">Comedy</option>
+                <option value="2">Sci-Fi</option>
+                <option value="3">Fantasy</option>
+                <option value="4">Horror</option>
+                <option value="5">Thriller</option>
+                <option value="6">Action</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <label class="inline-block" for="movie_duration">Duration: 
+                <input id="movie_duration" min="0" type="number">
+            </label>
+        </fieldset>
+        <fieldset>
+            <label class="inline-block" for="movie_description">Description: 
+                <textarea id="movie_description" placeholder="Give details about the movie" rows="2" cols="50"></textarea>
+            </label>
+        </fieldset>
+    </form>
 </body>
 </html>
