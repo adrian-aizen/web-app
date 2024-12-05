@@ -1,7 +1,7 @@
-const item = require('./movieDB/movieDB.js'); 
+const movie = require('./movieDB/movieDB.js'); 
 
 exports.getMovie = (req, res) => {
-    item.getMovie((err, movies) => {
+    movie.getMovie((err, movies) => {
         if (err) {
             return res.status(500).send(err.message);
         }
@@ -13,7 +13,7 @@ exports.getMovie = (req, res) => {
 exports.addMovie = (req, res) => {
     console.log('Request body:', req.body); 
     const { movie_name, movie_genre, movie_duration, movie_description } = req.body;
-    
+
     if (!movie_name || !movie_genre || !movie_duration || !movie_description) {
         return res.status(400).send('All fields are required.');
     }
@@ -23,7 +23,7 @@ exports.addMovie = (req, res) => {
         return res.status(400).send('Duration must be a number.');
     }
 
-    item.addMovie(movie_name, movie_genre, duration, movie_description, (err, item) => {
+    movie.addMovie(movie_name, movie_genre, duration, movie_description, (err, item) => {
         if (err) {
             console.error("Error adding movie:", err.message);
             return res.status(500).send(err.message);

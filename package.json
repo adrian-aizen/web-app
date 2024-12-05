@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./index.js",
-    "start": "node ./index.js",
-    "tail" : "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "dev": "nodemon ./assets/index.js",
+    "start": "node ./assets/index.js",
+    "tail": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.1",
     "sqlite3": "^5.1.7"
   },

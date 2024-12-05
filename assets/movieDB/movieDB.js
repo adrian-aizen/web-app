@@ -44,5 +44,3 @@ module.exports = {
   getMovie,
   addMovie
 };
-
-module.exports = db;
